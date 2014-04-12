@@ -1,0 +1,71 @@
+
+$sidebar-width: 300px;
+$arrow-width: 7px;
+$label-width: $sidebar-width - $arrow-width;
+$arrow-height: 70px;
+
+.arrow-container {
+    &:before {
+        left: $label-width;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-left-color: $BG1;
+        border-width: $arrow-height/2;
+        border-left-width: $arrow-width;               
+    }
+}
+
+.sidebar-menu {
+    .background {
+        background: $BG1;
+        width: $label-width;
+        margin-right: $arrow-width;
+        height: 100%;
+        position:absolute;
+        z-index:-1;
+    }
+    direction: rtl;
+    text-align: left;
+    width: $sidebar-width;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    a {
+        color: $FG1;
+        text-decoration: none;
+        @extend .roboto-light;
+    }
+    .nav {
+        li {
+            a {
+                .label {
+                    background: $BG1; //can be removed
+                    margin-right: $arrow-width;
+                    line-height: 70px;
+                    border-bottom: transparent 1px #ddd;
+                    padding: 0 25px;
+                    @extend .link-color-transition;
+                    &:hover {
+                        color: $FG1HOVER;
+                        background: $BG1HOVER;
+                    }
+                }
+            }
+            a.current {
+                .label {
+                    background: $BG1CURRENT;
+                    &:before {
+                        border-left-color: $BG1CURRENT;
+                    }
+                    @extend .arrow-container;                
+                }
+            }
+        }
+    }
+}

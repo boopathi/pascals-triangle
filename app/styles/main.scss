@@ -1,9 +1,22 @@
-$icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+@import "./reset.scss";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
+@import "./consts.scss";
 
-@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+.height100 {
+    height: 100%;
+}
 
-// bower:scss
-// endbower
+* {
+    font-family: $FONT;
+}
+
+.link {
+    text-decoration: none;
+}
+
+html, body {
+    @extend .height100;
+}
 
 .browsehappy {
     margin: 0.2em 0;
@@ -12,83 +25,59 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
     padding: 0.2em 0;
 }
 
-/* Space out content a bit */
-body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+.cf {
+    clear: both;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
+.f-left {
+    float: left;
 }
 
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
+.f-right {
+    float: right;
 }
 
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+.roboto-light {
+    font-family: $FONT;
+    font-weight: $FONTWT;
 }
 
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
+$background-color-transitions: background-color $transitionTime $transitionType;
+.background-color-transition {
+    -webkit-transition: $background-color-transitions;
+    -moz-transition: $background-color-transitions;
+    -o-transition: $background-color-transitions;
+    -ms-transition: $background-color-transitions;
+    transition: $background-color-transitions;
 }
 
-.container-narrow > hr {
-    margin: 30px 0;
+$text-color-transistion: color $transitionTime $transitionType;
+.text-color-transition {
+    -webkit-transition: $text-color-transistion;
+    -moz-transition: $text-color-transistion;
+    -o-transition: $text-color-transistion;
+    -ms-transition: $text-color-transistion;
+    transition: $text-color-transistion;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+$link-color-transition: background-color $transitionTime $transitionType, color $transitionTime $transitionType;
+.link-color-transition {
+    -webkit-transition: $link-color-transition;
+    -moz-transition: $link-color-transition;
+    -o-transition: $link-color-transition;
+    -ms-transition: $link-color-transition;
+    transition: $link-color-transition;
 }
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+$arrow-transition: background-color $transitionTime $transitionType, border-left-color $transitionTime $transitionType;
+.arrow-transition {
+    -webkit-transition: $arrow-transition;
+    -moz-transition: $arrow-transition;
+    -o-transition: $arrow-transition;
+    -ms-transition: $arrow-transition;
+    transition: $arrow-transition;
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-
-.marketing p + h4 {
-    margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
-}
+@import "./slides.scss";
+@import "./sidebar.scss";
+@import "./content.scss";
