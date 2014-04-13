@@ -1,6 +1,11 @@
 <div class="slides-wrapper">
-  <header class="f-right">
+  <header class="">
     <a href="" class="title">Pascal's triangle</a>
+    <div class="p-controller">
+      <input type="hidden" class="p-input" ng-model="N" ng-change="changeN()" ng-disabled="true"/>
+      <button class="p-ctrl p-ctrl-desc" ng-click="descN()">-</button>
+      <button class="p-ctrl p-ctrl-incr" ng-click="incrN()">+</button>
+    </div>
   </header>
   <section class="sidebar-menu">
     <div class="background"></div>
@@ -11,6 +16,17 @@
             ng-click="selectView($index)" >
             <div class="label">{{view.name}}</div>
         </a>
+      </li>
+    </ul>
+  </section>
+  <section class="p-content">
+    <ul class="p-container">
+      <li ng-repeat="row in pascal.grid track by $index">
+        <span class="p-e-container" ng-repeat="e in row track by $index">
+          <span class="p-element" ng-class="{true:'p-highlight', false:''}[highlights[$parent.$index][$index]]">
+            {{e}}
+          </span>
+        </span>
       </li>
     </ul>
   </section>

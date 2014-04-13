@@ -1,9 +1,3 @@
-
-$sidebar-width: 300px;
-$arrow-width: 7px;
-$label-width: $sidebar-width - $arrow-width;
-$arrow-height: 70px;
-
 .arrow-container {
     &:before {
         left: $label-width;
@@ -15,7 +9,7 @@ $arrow-height: 70px;
         pointer-events: none;
         border-left-color: $BG1;
         border-width: $arrow-height/2;
-        border-left-width: $arrow-width;               
+        border-left-width: $arrow-width;
     }
 }
 

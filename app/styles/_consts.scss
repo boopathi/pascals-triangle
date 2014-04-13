@@ -1,0 +1,30 @@
+$BG1: #7E07A9;
+$BG1CURRENT: #52026E; //#67237F;
+$BG1HOVER: #67237F; //#52026E;
+
+$BGLIGHT: #FFFFFF;
+
+$FG1: #EC7BFF;
+$FG1HOVER: #FFFFFF;
+
+$FONT: 'Roboto', sans-serif;
+$FONTWT: 100;
+
+// CSS Transision times
+$transitionTime: .5s;
+$transitionType: ease-out;
+
+
+//Sidebar
+$sidebar-width: 300px;
+$arrow-width: 7px;
+$label-width: $sidebar-width - $arrow-width;
+$arrow-height: 70px;
+
+
+//Content Colors
+$FG2: #67237F;
+$BG2: #B767D4;
+$bubble-width: 25px;
+$bubble-height: 25px;
+$bubble-expand: 3px;

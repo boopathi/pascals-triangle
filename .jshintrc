@@ -20,6 +20,9 @@
   "smarttabs": true,
   "globals": {
     "angular": false,
-    "Pascal": true
+    "Pascal": true,
+    "_": true,
+    "pascal": true,
+    "DATA": true
   }
 }

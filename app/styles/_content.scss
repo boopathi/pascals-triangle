@@ -1,0 +1,38 @@
+
+.p-content {
+	position: relative;
+	margin-left: $sidebar-width;
+	color: $FG2;
+}
+
+.p-container {
+	text-align: center;
+	.p-e-container {
+		display: inline-block;
+		width: $bubble-width + $bubble-expand + 1px;
+		line-height: $bubble-width + $bubble-expand + 1px;
+	}
+	.p-element {
+		@extend .bubble-transition;
+		display: inline-block;
+		vertical-align: middle;
+		width: $bubble-width;
+		line-height: $bubble-height;
+		font-family: $FONT;
+		font-weight: $FONTWT;
+		font-size: $bubble-height/2.5;
+		background: #EEEEEE;
+		color: $FG2;
+		cursor: pointer;
+		border-radius: 20px;
+		&:hover {
+			@extend .p-highlight;
+		}
+	}
+	.p-highlight {
+		background: $BG2;
+		color: $FG1HOVER;
+		width: $bubble-width + $bubble-expand;
+		line-height: $bubble-height + $bubble-expand;
+	}
+}

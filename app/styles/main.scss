@@ -1,6 +1,6 @@
-@import "./reset.scss";
+@import "reset";
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300);
-@import "./consts.scss";
+@import "consts";
 
 .height100 {
     height: 100%;
@@ -78,6 +78,15 @@ $arrow-transition: background-color $transitionTime $transitionType, border-left
     transition: $arrow-transition;
 }
 
-@import "./slides.scss";
-@import "./sidebar.scss";
-@import "./content.scss";
+$bubble-transition: background-color $transitionTime $transitionType, color $transitionTime $transitionType, width $transitionTime $transitionType, height $transitionTime $transitionType, line-height $transitionTime $transitionType;
+.bubble-transition {
+    -webkit-transition: $bubble-transition;
+    -moz-transition: $bubble-transition;
+    -o-transition: $bubble-transition;
+    -ms-transition: $bubble-transition;
+    transition: $bubble-transition;
+}
+
+@import "slides";
+@import "sidebar";
+@import "content";
