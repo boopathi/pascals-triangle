@@ -1,0 +1,29 @@
+{
+  "name": "pascals-triangle",
+  "version": "1.0.0",
+  "description": "pascals triangle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boopathi/pascals-triangle"
+  },
+  "keywords": [
+    "pascals",
+    "triangle"
+  ],
+  "author": "boopathi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boopathi/pascals-triangle/issues"
+  },
+  "homepage": "https://github.com/boopathi/pascals-triangle",
+  "dependencies": {
+    "jsx-loader": "^0.12.2",
+    "lodash": "^2.4.1",
+    "node-sass": "^2.0.0-beta",
+    "react-animate": "^0.1.5"
+  }
+}

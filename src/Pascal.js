@@ -1,0 +1,1 @@
+var animator = require('react-animate');
