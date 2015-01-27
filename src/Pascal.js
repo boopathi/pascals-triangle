@@ -1,4 +1,5 @@
-var _ = require('lodash');
+var _ = require('lodash'),
+	Bigint = require('./BigInteger');
 
 module.exports = Pascal;
 
@@ -29,37 +30,34 @@ Object.defineProperties(Pascal.prototype, {
 
 Pascal.sum = function(e) {
 	return e.reduce((memo,num) => {
-		var res = memo+num;
-		if(res > Number.MAX_SAFE_INTEGER) {
-			//console.warn('Not safe : ', res);
-		}
+		var res = memo.add(num);
 		return res;
-	}, 0);
+	}, Bigint.ZERO);
 };
 
 //
 // Methods
 //
 
-Pascal.prototype.multiplexArray = function(a, n) {
-	var ret = [], i, x;
-	for(i=0;i<n;i++) {
-		for(x in a) {
-			ret.push(a[x]);
-		}
-	}
-	return ret;
-};
+// Pascal.prototype.multiplexArray = function(a, n) {
+// 	var ret = [], i, x;
+// 	for(i=0;i<n;i++) {
+// 		for(x in a) {
+// 			ret.push(a[x]);
+// 		}
+// 	}
+// 	return ret;
+// };
 
 Pascal.prototype.fillGrid = function() {
 	this.grid = [];
-	var x=[1], i;
+	var x=[Bigint.ONE], i;
 	for(i=0;i<this._n;i++) {
 		this.grid.push(x);
 		x = _.map(
 				_.zip(
-					[0].concat(x),
-					x.concat([0])
+					[Bigint.ZERO].concat(x),
+					x.concat([Bigint.ZERO])
 				),
 				Pascal.sum
 			);
@@ -75,7 +73,7 @@ Pascal.prototype.biggest = function() {
 	// 	if(e>big) big = e;
 	// });
 	// return big;
-}
+};
 
 Pascal.prototype.each = function(fn) {
 	var result = [];
@@ -89,13 +87,16 @@ Pascal.prototype.each = function(fn) {
 	return result;
 };
 
-Pascal.prototype.primes = function() {
-	var primes = [2,3,5,7,11,13,17,19,23];
-	return this.each((e) => _.contains(primes, e));
+Pascal.prototype.all = function() {
+	return this.each((e) => true);
 };
 
-Pascal.prototype.fractal = function() {
-	return this.each((e) => e%2 === 0);
+Pascal.prototype.even = function() {
+	return this.each((e) => e.modPow(Bigint.ONE,2).valueOf() === 0);
+};
+
+Pascal.prototype.odd = function() {
+	return this.each((e) => e.modPow(Bigint.ONE,2).valueOf() === 1);
 };
 
 Pascal.prototype.toCanvas = function() {

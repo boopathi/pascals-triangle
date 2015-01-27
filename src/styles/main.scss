@@ -1,5 +1,17 @@
-@import "reset";
+@import "bootstrap";
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
 
 body {
 	background: purple;
+}
+
+#controls {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	.btn-group {
+		margin: 5px;
+	}
 }

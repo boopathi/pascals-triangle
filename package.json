@@ -1,6 +1,6 @@
 {
   "name": "pascals-triangle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pascals triangle",
   "main": "index.js",
   "scripts": {
