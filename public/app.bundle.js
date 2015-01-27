@@ -48,13 +48,6 @@
 
 	var Pascal = __webpack_require__(1),
 	    Matrix = __webpack_require__(2);
-	// ReactPascalElement = require('./src/UI.js');
-
-	// document.addEventListener('DOMContentLoaded', function() {
-	// 	React.render(React.createElement(Pascal, {
-	// 		n: 10
-	// 	}), document.getElementById('react'));
-	// });
 
 	var p = new Pascal(1);
 

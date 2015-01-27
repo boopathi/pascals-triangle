@@ -1,12 +1,5 @@
 var Pascal = require('./src/Pascal'),
 	Matrix = require('./src/Matrix');
-	// ReactPascalElement = require('./src/UI.js');
-
-// document.addEventListener('DOMContentLoaded', function() {
-// 	React.render(React.createElement(Pascal, {
-// 		n: 10
-// 	}), document.getElementById('react'));
-// });
 
 var p = new Pascal(1);
 
