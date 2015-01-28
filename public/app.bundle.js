@@ -63,7 +63,7 @@
 	  getDefaultProps: function () {
 	    return {
 	      align: ["left", "center", "right"],
-	      filter: ["all", "odd", "even"],
+	      filter: ["all", "odd", "even", "primes"],
 	      size: ["minus", "plus"]
 	    };
 	  },
@@ -290,6 +290,13 @@
 	Pascal.prototype.odd = function () {
 	  return this.each(function (e) {
 	    return e.modPow(Bigint.ONE, 2).valueOf() === 1;
+	  });
+	};
+
+	Pascal.prototype.primes = function () {
+	  var primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97];
+	  return this.each(function (e, i, j) {
+	    return _.contains(primes, i) && !(j === 0 || j === i);
 	  });
 	};
 

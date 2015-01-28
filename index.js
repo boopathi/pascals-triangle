@@ -14,7 +14,7 @@ var Panel = React.createClass({
 	getDefaultProps: function() {
 		return {
 			align: ['left', 'center', 'right'],
-			filter: ['all','odd','even'],
+			filter: ['all','odd','even','primes'],
 			size: ['minus', 'plus']
 		}
 	},
