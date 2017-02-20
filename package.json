@@ -21,11 +21,11 @@
   },
   "homepage": "https://github.com/boopathi/pascals-triangle",
   "dependencies": {
-    "6to5": "^2.13.7",
-    "6to5-loader": "^2.0.0",
-    "jsx-loader": "^0.12.2",
-    "lodash": "^2.4.1",
-    "node-sass": "^2.0.0-beta",
-    "webpack": "^1.5.3"
+    "6to5": "^3.6.5",
+    "6to5-loader": "^3.0.0",
+    "jsx-loader": "^0.13.2",
+    "lodash": "^4.17.4",
+    "node-sass": "^4.5.0",
+    "webpack": "^2.2.1"
   }
 }
